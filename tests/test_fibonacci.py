@@ -9,10 +9,17 @@ class TestFibonacci:
     def test_on_correct_n(self):
         assert my_lib.fibonacci(6) == [0, 1, 1, 2, 3, 5]
 
-    # Тестируем программу на некоррктных данных. Функция вызывает исключение IndexError.
+    # Тестируем программу на некоррктных данных.
+    def test_on_minus(self):
+        assert my_lib.fibonacci(-1) == []
+
+    # Тестируем программу на нуле.
     def test_on_zero(self):
-        # Когда мы подаем на вход программе число 0 - функция поиска простых чисел завершается с ошибкой.
+        assert my_lib.fibonacci(0) == []
+
+    def test_on_str(self):
+        # Когда мы подаем на вход программе строку или букву - функция завершается с ошибкой.
         # Данная строчка показывает, что внутри блока кода под ней должно возникнуть заданное исключение
         # и это нормальное поведение.
-        with pytest.raises(IndexError):
-            my_lib.find_primes(0)
+        with pytest.raises(TypeError):
+            my_lib.fibonacci("abc")

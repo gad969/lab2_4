@@ -12,7 +12,7 @@ def fibonacci(n):
     return fib_sequence
 
 #n - количество чисел Фибоначчи которые нужно вычислить
-#n = 6
+#n = 7
 #print(fibonacci(n))
 
 
@@ -28,7 +28,7 @@ def bubble_sort(arr):
     return arr
 
 
-#numbers = [64, 34, 25, 12, 22, 11, 90]
+#numbers = [2, 4, 9, 32, 1, 9]
 #sorted_numbers = bubble_sort(numbers)
 #print("Отсортированный список:", sorted_numbers)
 
@@ -49,4 +49,4 @@ def find_primes(n):
             primes.append(number)
     return primes
 
-#find_primes(8)
+#find_primes(4)
