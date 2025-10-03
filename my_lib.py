@@ -49,4 +49,4 @@ def find_primes(n):
             primes.append(number)
     return primes
 
-#find_primes(4)
+#find_primes(-4)
