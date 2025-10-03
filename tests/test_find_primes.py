@@ -16,3 +16,10 @@ class TestFindPrimes:
         # и это нормальное поведение.
         with pytest.raises(IndexError):
             my_lib.find_primes(0)
+
+    def test_on_str(self):
+        # Когда мы подаем на вход программе букву или строку - функция поиска простых чисел завершается с ошибкой.
+        # Данная строчка показывает, что внутри блока кода под ней должно возникнуть заданное исключение
+        # и это нормальное поведение.
+        with pytest.raises(TypeError):
+            my_lib.find_primes('r')
